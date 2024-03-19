@@ -16,6 +16,9 @@ function addToArray() {
      console.log(todoList);
      todoItem = '';
 }
+function removeThis(index){
+     todoList.splice(index,1);
+}
 </script>
 <h1>To do</h1>
 <form on:submit={addToArray}>
