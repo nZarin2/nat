@@ -23,16 +23,13 @@ function addToArray() {
 <input type="Submit"><button> Add </button>
 </form>
 <ul>
-     {#each todoList as item}
+     {#each todoList as item, index}
  <li>
 <input type="checkbox" bind:checked={item.done}>
 <span class.done={item.done}>{item.text}</span>
-<span class="remove">&items;
-
+     <span on:click={() => removeThis(index)}
+          class="remove" role="button" tabindex="0">&items;
 </span>
-
-
-
 </li>
 
 {/each}
