@@ -6,10 +6,15 @@
 let todoItem = '';
 let todoList = [];
 function addToArray() {
-     todoList.push(todoItem);
-     todoList = todoList;
-     console. log(todoList);
-     todoItem= '';
+     if(todoItem==''){
+          return;
+     }
+     todoList = [ ...todoList,{
+          text: todoItem,
+          done: false
+     }]
+     console.log(todoList);
+     todoItem = '';
 }
 </script>
 <h1>To do</h1>
@@ -20,8 +25,8 @@ function addToArray() {
 <ul>
      {#each todoList as item}
  <li>
-<input type="checkbox">
-{item}
+<input type="checkbox" bind:checked={item.done}>
+<span class.done={item.done}>{item.text}</span>
 
 
 </li>
@@ -31,5 +36,9 @@ function addToArray() {
 <style>
      ul{
           list-style: none;
+     }
+     .done{
+          color:aquamarine;
+          text-decoration: line-through;
      }
 </style>
