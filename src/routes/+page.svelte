@@ -27,6 +27,10 @@ function addToArray() {
  <li>
 <input type="checkbox" bind:checked={item.done}>
 <span class.done={item.done}>{item.text}</span>
+<span class="remove">&items;
+
+</span>
+
 
 
 </li>
@@ -40,5 +44,8 @@ function addToArray() {
      .done{
           color:aquamarine;
           text-decoration: line-through;
+     }
+     .remove{
+          color:rgb(113, 6, 58);
      }
 </style>
