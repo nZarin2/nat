@@ -20,7 +20,7 @@ function addToArray() {
 <ul>
      {#each todoList as item}
  <li>
-
+<input type="checkbox">
 {item}
 
 
@@ -28,3 +28,8 @@ function addToArray() {
 
 {/each}
 </ul>
+<style>
+     ul{
+          list-style: none;
+     }
+</style>
